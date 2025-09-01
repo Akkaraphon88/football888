@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FootballShop – Product Detail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-green-900 text-white sticky top-0 z-20 shadow">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <div class="flex items-center gap-2">
+        <img src="imgCleat/888.png" alt="Logo" class="h-10 w-auto">
+        <h1 class="font-bold text-xl">Football888</h1>
+      </div>
+
+      <a href="index.html" class="font-bold">888FootballShop</a>
+      <nav class="hidden md:flex gap-6">
+        <a href="index.html" class="hover:text-green-300">Home</a>
+        <a href="#about" class="hover:text-green-300">About</a>
+        <a href="#contact" class="hover:text-green-300">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+  <!-- Breadcrumb -->
+  <div class="max-w-7xl mx-auto px-4 py-3 text-sm text-gray-600">
+    <a href="index.html" class="hover:underline">Home</a> / 
+    <a href="#" class="hover:underline">Nike</a> / 
+    Phantom Elite FG
+  </div>
+
+  <!-- Main Product -->
+  <main class="max-w-7xl mx-auto px-4 py-6 grid md:grid-cols-2 gap-6">
+    <!-- Gallery -->
+    <div>
+      <img src="imgCleat/NIKE1.webp" alt="Nike Phantom" class="w-full rounded-lg shadow aspect-[4/3] object-cover">
+      <div class="grid grid-cols-4 gap-2 mt-3">
+        <img src="imgCleat/NIKE1.webp" class="rounded border cursor-pointer">
+        <img src="imgCleat/NIKE2.webp" class="rounded border cursor-pointer">
+        <img src="imgCleat/NIKE3.webp" class="rounded border cursor-pointer">
+        <img src="imgCleat/ADD1.webp" class="rounded border cursor-pointer">
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <h1 class="text-2xl font-bold">Nike Phantom Elite FG</h1>
+      <p class="text-gray-500 text-sm mt-1">รหัสสินค้า: NPH-2025</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold text-2xl">฿6,990</span>
+        <span class="text-gray-400 line-through">฿7,790</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★★☆ (4.5)</p>
+
+      <div class="mt-4">
+        <p><b>พื้นสนาม:</b> FG</p>
+        <p><b>ระดับ:</b> Elite</p>
+        <p><b>วัสดุ:</b> Engineered Mesh + FG Plate</p>
+        <p><b>น้ำหนัก:</b> 210 กรัม</p>
+      </div>
+
+      <!-- Size -->
+      <div class="mt-4">
+        <label class="block font-medium mb-1">เลือก Size</label>
+        <div class="flex flex-wrap gap-2">
+          <button class="px-3 py-1 border rounded hover:bg-green-100">40</button>
+          <button class="px-3 py-1 border rounded hover:bg-green-100">41</button>
+          <button class="px-3 py-1 border rounded hover:bg-green-100">42</button>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <button class="mt-6 w-full bg-green-700 text-white py-3 rounded-lg hover:bg-green-800">
+        🛒 หยิบใส่ตะกร้า
+      </button>
+    </div>
+  </main>
+
+  <!-- Tabs -->
+  <section class="max-w-7xl mx-auto px-4 mt-10">
+    <div class="bg-white rounded-lg shadow p-6">
+      <h2 class="font-bold text-lg mb-3">รายละเอียดสินค้า</h2>
+      <p class="text-sm text-gray-600">
+        รองเท้าฟุตบอล Nike Phantom Elite FG รุ่นใหม่ 2025 
+        ออกแบบเพื่อความแม่นยำและการควบคุมบอล เหมาะสำหรับพื้นหญ้าจริง FG
+      </p>
+
+      <h3 class="font-bold mt-6 mb-2">รีวิวจากลูกค้า</h3>
+      <p class="text-yellow-500 text-sm">★★★★☆ (4.5/5)</p>
+      <ul class="list-disc ml-5 mt-2 text-sm text-gray-600">
+        <li>เบา ใส่สบายมาก</li>
+        <li>ฟิตกระชับ ดีดบอลดี</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+  <section class="max-w-7xl mx-auto px-4 mt-10">
+    <h2 class="font-bold text-lg mb-4">สินค้าที่เกี่ยวข้อง</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <a href="NIKE1.html" class="bg-white rounded shadow hover:shadow-lg p-3">
+        <img src="imgCleat/ADD1.webp" class="w-full aspect-[4/3] object-cover rounded">
+        <p class="mt-2 text-sm font-medium">Adidas Predator Pro</p>
+        <p class="text-green-700 text-sm">฿5,800</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-900 text-white text-center py-6 mt-10">
+    <p>© 2025 FootballShop</p>
+  </footer>
+
+</body>
+</html>

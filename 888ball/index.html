@@ -1,0 +1,474 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football888</title>
+
+  <!-- ใส่โลโก้ ร้าน888เราที่แทป -->
+  <link rel="icon" type="image/png" href="imgCleat/888.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-green-900 text-white sticky top-0 z-20 shadow">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <div class="flex items-center gap-2">
+        <img src="imgCleat/888.png" alt="Logo" class="h-10 w-auto">
+        <h1 class="font-bold text-xl">Football888</h1>
+      </div>
+<!-- ลิ้งไปตามที่กดจ้า -->
+<nav class="hidden md:flex gap-6">
+  <a href="index.html" class="hover:text-green-300">Home</a>
+  <a href="#about" class="hover:text-green-300">About</a>
+  <a href="#contact" class="hover:text-green-300">Contact</a>
+</nav>
+
+      <input type="text" placeholder="ค้นหารองเท้า..." class="hidden md:block px-3 py-2 rounded text-black w-64">
+    </div>
+  </header>
+
+<!-- Hero -->
+<section class="relative bg-green-700 text-white text-center overflow-hidden h-[40vh] flex items-center">
+  <!-- Background Image -->
+  <img src="imgCleat/Antony888.jpg" 
+       alt="Football Player" 
+       class="absolute inset-0 w-full h-full object-cover opacity-70">
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-green-900/80 to-green-700/70"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-3xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-extrabold drop-shadow-lg">
+      ⚽ <span class="text-yellow-400">Football888</span> มาแล้วจ้า!
+    </h2>
+    <p class="mt-2 text-base md:text-lg text-gray-100">
+      รองเท้าสตั๊ดรุ่นใหม่มาแรง พร้อมให้เลือกแล้ววันนี้<br>
+      ทั้ง Nike · Adidas · Puma · Skechers
+    </p>
+    <a href="#products"
+       class="mt-4 inline-block bg-yellow-400 text-green-900 font-bold px-6 py-2 rounded-lg shadow hover:bg-yellow-300 transition">
+      🔥 เลือกดูสินค้าได้่เลย
+    </a>
+  </div>
+</section>
+
+
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-12 gap-6">
+    <!-- Sidebar Filter -->
+    <aside class="col-span-12 lg:col-span-3 bg-white rounded-lg shadow p-4 h-fit">
+      <h3 class="font-bold text-lg mb-4">ตัวกรอง</h3>
+      <!-- Brand -->
+      <div class="mb-4">
+        <p class="font-medium text-sm mb-2">แบรนด์</p>
+        <div class="flex flex-col gap-1 text-sm">
+          <label><input type="checkbox" class="mr-1"> Nike</label>
+          <label><input type="checkbox" class="mr-1"> Adidas</label>
+          <label><input type="checkbox" class="mr-1"> Puma</label>
+          <label><input type="checkbox" class="mr-1"> Kappa</label>
+          <label><input type="checkbox" class="mr-1"> Skechers</label>
+        </div>
+      </div>
+      <!-- Surface -->
+      <div class="mb-4">
+        <p class="font-medium text-sm mb-2">พื้นสนาม</p>
+        <div class="flex flex-col gap-1 text-sm">
+          <label><input type="checkbox" class="mr-1"> FG</label>
+          <label><input type="checkbox" class="mr-1"> AG</label>
+          <label><input type="checkbox" class="mr-1"> SG</label>
+          <label><input type="checkbox" class="mr-1"> TF</label>
+        </div>
+      </div>
+      <!-- Price -->
+      <div class="mb-4">
+        <p class="font-medium text-sm mb-2">ราคา</p>
+        <select class="w-full rounded border px-2 py-1 text-sm">
+          <option>ต่ำ → สูง</option>
+          <option>สูง → ต่ำ</option>
+        </select>
+      </div>
+      <!-- Size -->
+      <div>
+        <p class="font-medium text-sm mb-2">Size</p>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <span class="px-2 py-1 border rounded">40</span>
+          <span class="px-2 py-1 border rounded">41</span>
+          <span class="px-2 py-1 border rounded">42</span>
+          <span class="px-2 py-1 border rounded">43</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Product Grid -->
+    <section class="col-span-12 lg:col-span-9">
+      <div class="flex items-center justify-between mb-4">
+        <span class="text-sm text-gray-600">พบสินค้าน่าซื้อหลายคู่เลยครับ</span>
+        <select class="rounded border px-2 py-1 text-sm">
+          <option>Sort by</option>
+          <option>ใหม่สุด</option>
+          <option>ราคาต่ำ → สูง</option>
+          <option>ราคาสูง → ต่ำ</option>
+        </select>
+      </div>
+
+     <!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+  <!-- NIKE1 -->
+    <!-- หรือจะลิงค์ไปNIKE1.HTMLกันจารบอกไม่ให้ใช้JS -->
+  <a href="product.html?id=nike1" class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden group">
+    <img src="imgCleat/NIKE1.webp" alt="NIKE Phantom 6 Elite FG" 
+         class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" loading="lazy">
+    <div class="p-4">
+      <h3 class="font-semibold text-lg">Nike Phantom 6 Elite</h3>
+      <p class="text-sm text-gray-500">พื้นสนาม: FG</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold">฿6,990</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★★☆ (4.5)</p>
+    </div>
+  </a>
+
+  <!-- NIKE2 -->
+  <a href="product.html?id=nike2" class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden group">
+    <img src="imgCleat/NIKE2.webp" alt="NIKE Mercurial Vapor 16 Elite AG-Pro" 
+         class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" loading="lazy">
+    <div class="p-4">
+      <h3 class="font-semibold text-lg">Nike Mercurial Vapor 16 Elite</h3>
+      <p class="text-sm text-gray-500">พื้นสนาม: AG</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold">฿8,700</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★★★ (5.0)</p>
+    </div>
+  </a>
+
+  <!-- NIKE 3 -->
+  <a href="product.html?id=nike3" class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden group">
+    <img src="imgCleat/NIKE3.webp" alt="NIKE Tiempo Legend 10 Academy MG" 
+         class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" loading="lazy">
+    <div class="p-4">
+      <h3 class="font-semibold text-lg">Nike Tiempo Legend 10 Academy</h3>
+      <p class="text-sm text-gray-500">พื้นสนาม: MG</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold">฿3,200</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★★☆ (4.2)</p>
+    </div>
+  </a>
+
+  <!-- ADIDAS 1 -->
+  <a href="product.html?id=adidas1" class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden group">
+    <img src="imgCleat/ADD1.webp" alt="ADIDAS Predator Pro Fold-Over Tongue FG" 
+         class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" loading="lazy">
+    <div class="p-4">
+      <h3 class="font-semibold text-lg">Adidas Predator Pro Fold-Over Tongue</h3>
+      <p class="text-sm text-gray-500">พื้นสนาม: FG</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold">฿5,800</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★★☆ (4.3)</p>
+    </div>
+  </a>
+
+  <!-- ADIDAS 2 -->
+  <a href="product.html?id=adidas2" class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden group">
+    <img src="imgCleat/ADD2.webp" alt="ADIDAS F50 Club MG" 
+         class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" loading="lazy">
+    <div class="p-4">
+      <h3 class="font-semibold text-lg">Adidas F50 Club</h3>
+      <p class="text-sm text-gray-500">พื้นสนาม: MG</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold">฿2,000</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★☆☆ (3.8)</p>
+    </div>
+  </a>
+
+  <!-- ADIDAS 3 -->
+  <a href="product.html?id=adidas3" class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden group">
+    <img src="imgCleat/ADD3.webp" alt="ADIDAS Copa Pure 3 Club MG" 
+         class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" loading="lazy">
+    <div class="p-4">
+      <h3 class="font-semibold text-lg">Adidas Copa Pure 3 Club</h3>
+      <p class="text-sm text-gray-500">พื้นสนาม: MG</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold">฿1,600</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★★☆ (4.0)</p>
+    </div>
+  </a>
+
+  <!-- PUMA 1 -->
+  <a href="product.html?id=puma1" class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden group">
+    <img src="imgCleat/PUMA1.webp" alt="PUMA Future 8 Match FG/AG" 
+         class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" loading="lazy">
+    <div class="p-4">
+      <h3 class="font-semibold text-lg">Puma Future 8 Match</h3>
+      <p class="text-sm text-gray-500">พื้นสนาม: FG/AG</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold">฿4,200</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★★☆ (4.1)</p>
+    </div>
+  </a>
+
+  <!-- PUMA 2 -->
+  <a href="product.html?id=puma2" class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden group">
+    <img src="imgCleat/PUMA2.webp" alt="PUMA Ultra 6 Match FG/AG" 
+         class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" loading="lazy">
+    <div class="p-4">
+      <h3 class="font-semibold text-lg">Puma Ultra 6 Match</h3>
+      <p class="text-sm text-gray-500">พื้นสนาม: FG/AG</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold">฿3,300</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★★☆ (4.0)</p>
+    </div>
+  </a>
+
+  <!-- PUMA 3 -->
+  <a href="product.html?id=puma3" class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden group">
+    <img src="imgCleat/PUMA3.webp" alt="PUMA King Top FG/AG" 
+         class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" loading="lazy">
+    <div class="p-4">
+      <h3 class="font-semibold text-lg">Puma King Top</h3>
+      <p class="text-sm text-gray-500">พื้นสนาม: FG/AG</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold">฿4,500</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★★☆ (4.2)</p>
+    </div>
+  </a>
+
+  <!-- KAPPA 1 -->
+  <a href="product.html?id=kappa1" class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden group">
+    <img src="imgCleat/KAPPA1.webp" alt="KAPPA Player Base FG" 
+         class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" loading="lazy">
+    <div class="p-4">
+      <h3 class="font-semibold text-lg">Kappa Player Base</h3>
+      <p class="text-sm text-gray-500">พื้นสนาม: FG</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold">฿900</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★☆☆ (3.6)</p>
+    </div>
+  </a>
+
+  <!-- KAPPA 2 -->
+  <a href="product.html?id=kappa2" class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden group">
+    <img src="imgCleat/KAPPA2.webp" alt="KAPPA Helium Base FG" 
+         class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" loading="lazy">
+    <div class="p-4">
+      <h3 class="font-semibold text-lg">Kappa Helium Base</h3>
+      <p class="text-sm text-gray-500">พื้นสนาม: FG</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold">฿900</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★☆☆ (3.6)</p>
+    </div>
+  </a>
+
+  <!-- KAPPA 3 -->
+  <a href="product.html?id=kappa3" class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden group">
+    <img src="imgCleat/KAPPA3.webp" alt="KAPPA Player Pro FG" 
+         class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" loading="lazy">
+    <div class="p-4">
+      <h3 class="font-semibold text-lg">Kappa Player Pro</h3>
+      <p class="text-sm text-gray-500">พื้นสนาม: FG</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold">฿2,100</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★☆☆ (3.9)</p>
+    </div>
+  </a>
+
+  <!-- SKECHERS 1 -->
+  <a href="product.html?id=ske1" class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden group">
+    <img src="imgCleat/SKE1.webp" alt="SKECHERS SKX_1.5 Elite FG" 
+         class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" loading="lazy">
+    <div class="p-4">
+      <h3 class="font-semibold text-lg">Skechers SKX 1.5 Elite</h3>
+      <p class="text-sm text-gray-500">พื้นสนาม: FG</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold">฿7,900</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★★☆ (4.4)</p>
+    </div>
+  </a>
+
+  <!-- SKECHERS 2 -->
+  <a href="product.html?id=ske2" class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden group">
+    <img src="imgCleat/SKE2.webp" alt="SKECHERS SKX_01 1.5 High Elite FG" 
+         class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" loading="lazy">
+    <div class="p-4">
+      <h3 class="font-semibold text-lg">Skechers SKX 01 1.5 High Elite</h3>
+      <p class="text-sm text-gray-500">พื้นสนาม: FG</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold">฿8,100</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★★☆ (4.5)</p>
+    </div>
+  </a>
+
+  <!-- SKECHERS 3 -->
+  <a href="product.html?id=ske3" class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden group">
+    <img src="imgCleat/SKE3.webp" alt="SKECHERS Razor 1.5 Elite FG" 
+         class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" loading="lazy">
+    <div class="p-4">
+      <h3 class="font-semibold text-lg">Skechers Razor 1.5 Elite</h3>
+      <p class="text-sm text-gray-500">พื้นสนาม: FG</p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span class="text-green-700 font-bold">฿8,100</span>
+      </div>
+      <p class="text-yellow-500 text-sm mt-1">★★★★☆ (4.5)</p>
+    </div>
+  </a>
+
+</div>
+
+      </div>
+    </section>
+  </main>
+
+<!-- About Section -->
+<section id="about" class="max-w-7xl mx-auto px-4 py-16">
+  <div class="relative overflow-hidden rounded-2xl bg-white shadow-xl">
+    <!-- top accent -->
+    <div class="h-2 w-full bg-gradient-to-r from-green-800 via-green-600 to-green-800"></div>
+
+    <div class="p-8 md:p-10 grid grid-cols-1 md:grid-cols-5 gap-10 items-center">
+      <!-- Logo / Brand -->
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-4">
+          <img src="imgCleat/888.png" alt="Football888 Logo"
+               class="h-20 w-20 md:h-24 md:w-24 object-contain drop-shadow">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-green-900">888FootballShop</h2>
+            <p class="text-sm text-gray-500 mt-1"> ฟุตบอลกำลังร้องให้กับรองเท้าที่ดีที่สุดของร้านเรา⚽</p>
+          </div>
+        </div>
+
+        <p class="mt-6 text-lg text-gray-700 leading-relaxed">
+          ร้านรองเท้าฟุตบอลออนไลน์สำหรับคนรักลูกหนังอย่างแท้จริง
+          คัดสรรเฉพาะ <span class="font-semibold text-green-800">ของแท้ 100%</span> คุณภาพดี ดีไซน์เท่
+          ราคาเป็นมิตรนักเรียน–นักศึกษา พร้อมส่งด่วนทั่วประเทศ 📦
+        </p>
+
+        <!-- Brand pills -->
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="px-3 py-1 text-sm bg-green-50 text-green-800 rounded-full border border-green-200">Nike</span>
+          <span class="px-3 py-1 text-sm bg-green-50 text-green-800 rounded-full border border-green-200">Adidas</span>
+          <span class="px-3 py-1 text-sm bg-green-50 text-green-800 rounded-full border border-green-200">Puma</span>
+          <span class="px-3 py-1 text-sm bg-green-50 text-green-800 rounded-full border border-green-200">Kappa</span>
+          <span class="px-3 py-1 text-sm bg-green-50 text-green-800 rounded-full border border-green-200">Skechers</span>
+        </div>
+
+        <!-- Highlights -->
+        <ul class="mt-6 space-y-2 text-gray-700">
+          <li>✅ ของแท้แน่นอน มีรับประกันความพอใจ</li>
+          <li>✅ ไซส์ครบ 40–46 มีให้เลือก</li>
+          <li>✅ โปรแรงตลอดฤดูกาล & บริการหลังการขายโครตดี</li>
+        </ul>
+
+        <!-- CTA -->
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#products" class="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-green-700 text-white font-semibold hover:bg-green-800 shadow">
+            เลือกดูสินค้า
+          </a>
+          <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 rounded-lg border border-green-700 text-green-800 font-semibold hover:bg-green-50">
+            ติดต่อร้าน
+          </a>
+        </div>
+      </div>
+
+      <!-- Info card -->
+      <div class="md:col-span-3">
+        <div class="rounded-xl border border-gray-200 bg-gradient-to-br from-white to-green-50 p-6 md:p-8 shadow-inner">
+          <h3 class="text-xl md:text-2xl font-bold text-green-900 mb-4">📍 ที่ตั้ง & ช่องทางติดต่อ</h3>
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="space-y-2 text-gray-700">
+              <p><span class="font-semibold">ที่ตั้งร้าน:</span> ข้างมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p>
+              <p>1518 ถนนประชาราษฎร์ 1 แขวงวงศ์สว่าง เขตบางซื่อ กรุงเทพฯ 10800</p>
+              <div class="mt-4 space-y-1">
+                <p>📞 <b>099-888-888</b></p>
+                <p>📧 <b>support@football888.com</b></p>
+                <p>LINE: <b>@football888</b></p>
+                <p>Facebook: <b>@Football888</b></p>
+              </div>
+            </div>
+            <!-- Map / photo placeholder -->
+            <div class="relative">
+              <div class="aspect-[16/10] w-full overflow-hidden rounded-lg shadow-md ring-1 ring-green-200">
+                <!-- วางรูปแผนที่/หน้าร้านจริงได้ที่นี่ -->
+                <img src="imgCleat/Antony888.jpg" alt="Store / Map"
+                     class="h-full w-full object-cover">
+              </div>
+              <div class="absolute -bottom-3 -right-3 bg-green-700 text-white text-xs px-3 py-1 rounded-md shadow">
+                เปิดทุกวัน 10:00–20:00 น.
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+            <div class="rounded-lg bg-white shadow p-4">
+              <div class="text-2xl font-extrabold text-green-800">888+</div>
+              <div class="text-xs text-gray-500">คู่ที่จำหน่าย</div>
+            </div>
+            <div class="rounded-lg bg-white shadow p-4">
+              <div class="text-2xl font-extrabold text-green-800">4.8/5</div>
+              <div class="text-xs text-gray-500">เรตติ้งลูกค้า</div>
+            </div>
+            <div class="rounded-lg bg-white shadow p-4">
+              <div class="text-2xl font-extrabold text-green-800">ทั่วประเทศ</div>
+              <div class="text-xs text-gray-500">จัดส่งด่วน</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- bottom accent -->
+    <div class="h-2 w-full bg-gradient-to-r from-green-800 via-green-600 to-green-800"></div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="max-w-5xl mx-auto px-6 py-16">
+  <h2 class="text-4xl font-extrabold text-center text-green-900 mb-12 drop-shadow-lg">
+    📩 Contact Us
+  </h2>
+
+  <div class="bg-white rounded-2xl shadow-2xl p-10 flex flex-col items-center">
+    <!-- ข้อมูลติดต่อ -->
+    <div class="text-center space-y-5">
+      <p class="text-2xl font-semibold text-gray-800">📞 โทร: <span class="text-green-800">099-888-888</span></p>
+      <p class="text-2xl font-semibold text-gray-800">📧 Email: <span class="text-green-800">support@football888.com</span></p>
+      <p class="text-2xl font-semibold text-gray-800">📍 Line: <span class="text-green-800">@football888</span></p>
+      <p class="text-2xl font-semibold text-gray-800">📍 Facebook: <span class="text-green-800">Football 888</span></p>
+    </div>
+
+    <!-- รูป -->
+    <div class="flex justify-center gap-8 mt-10">
+      <img src="imgCleat/boss888.png" alt="Boss888"
+           class="h-72 md:h-96 object-contain rounded-xl shadow-xl border-4 border-green-700 hover:scale-105 transition">
+      <img src="imgCleat/few888.png" alt="Few888"
+           class="h-72 md:h-96 object-contain rounded-xl shadow-xl border-4 border-green-700 hover:scale-105 transition">
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="bg-green-900 text-white text-center py-6 mt-10">
+  <p>Copyright © 2025 Football888</p>
+</footer>
+
+</body>
+</html>
