@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football888 – Product Detail</title>
+
+  <!-- โลโก้ร้านในแท็บ -->
+  <link rel="icon" type="image/png" href="imgCleat/888.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-green-900 text-white sticky top-0 z-20 shadow">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      
+      <!-- โลโก้ -->
+      <div class="flex items-center gap-2">
+        <img src="imgCleat/888.png" alt="Logo" class="h-10 w-auto">
+        <h1 class="font-bold text-xl">Football888</h1>
+      </div>
+
+      <!-- เมนู -->
+      <nav class="hidden md:flex gap-6">
+        <a href="index.html" class="hover:text-green-300">Home</a>
+        <a href="index.html#about" class="hover:text-green-300">About</a>
+        <a href="index.html#contact" class="hover:text-green-300">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="max-w-7xl mx-auto px-4 py-3 text-sm text-gray-600">
+    <a href="index.html" class="hover:underline">Home</a> / 
+    <span id="breadcrumb-brand"></span> / 
+    <span id="breadcrumb-name"></span>
+  </div>
+
+  <!-- Main Product -->
+  <main class="max-w-7xl mx-auto px-4 py-6 grid md:grid-cols-2 gap-6">
+    <!-- Gallery -->
+    <div>
+      <img id="product-img" class="w-full rounded-lg shadow aspect-[4/3] object-cover" alt="">
+      <div class="grid grid-cols-4 gap-2 mt-3">
+        <img id="thumb1" class="rounded border cursor-pointer" alt="">
+        <img id="thumb2" class="rounded border cursor-pointer" alt="">
+        <img id="thumb3" class="rounded border cursor-pointer" alt="">
+        <img id="thumb4" class="rounded border cursor-pointer" alt="">
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <h1 id="product-name" class="text-2xl font-bold"></h1>
+      <p class="text-gray-500 text-sm mt-1">รหัสสินค้า: <span id="product-code"></span></p>
+      <div class="flex items-baseline gap-2 mt-2">
+        <span id="product-price" class="text-green-700 font-bold text-2xl"></span>
+        <span id="product-oldprice" class="text-gray-400 line-through"></span>
+      </div>
+      <p id="product-rating" class="text-yellow-500 text-sm mt-1"></p>
+
+      <div class="mt-4">
+        <p><b>พื้นสนาม:</b> <span id="product-surface"></span></p>
+        <p><b>ระดับ:</b> <span id="product-level"></span></p>
+        <p><b>วัสดุ:</b> <span id="product-material"></span></p>
+        <p><b>น้ำหนัก:</b> <span id="product-weight"></span></p>
+      </div>
+
+      <!-- Size -->
+      <div class="mt-4">
+        <label class="block font-medium mb-1">เลือก Size</label>
+        <div class="flex flex-wrap gap-2">
+          <button class="px-3 py-1 border rounded hover:bg-green-100">40</button>
+          <button class="px-3 py-1 border rounded hover:bg-green-100">41</button>
+          <button class="px-3 py-1 border rounded hover:bg-green-100">42</button>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <button class="mt-6 w-full bg-green-700 text-white py-3 rounded-lg hover:bg-green-800">
+        🛒 หยิบใส่ตะกร้า
+      </button>
+    </div>
+  </main>
+
+  <!-- Tabs -->
+  <section class="max-w-7xl mx-auto px-4 mt-10">
+    <div class="bg-white rounded-lg shadow p-6">
+      <h2 class="font-bold text-lg mb-3">รายละเอียดสินค้า</h2>
+      <p id="product-desc" class="text-sm text-gray-600"></p>
+
+      <h3 class="font-bold mt-6 mb-2">รีวิวจากลูกค้า</h3>
+      <p id="product-review" class="text-yellow-500 text-sm"></p>
+      <ul id="product-review-list" class="list-disc ml-5 mt-2 text-sm text-gray-600"></ul>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+  <section class="max-w-7xl mx-auto px-4 mt-10">
+    <h2 class="font-bold text-lg mb-4">สินค้าที่เกี่ยวข้อง</h2>
+    <div id="related-products" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-900 text-white text-center py-6 mt-10">
+    <p>© 2025 FootballShop</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+  (function(){
+    try {
+      const $ = (id) => document.getElementById(id);
+
+      // ---------- DATA ----------
+      const products = {
+           // -nike1-
+        nike1:{brand:"Nike",code:"NPH-2025",name:"NIKE Phantom 6 Elite FG",price:6990,oldPrice:7790,surface:"FG",level:"Elite",material:"Engineered Mesh + FG Plate",weight:"210 กรัม",image:"imgCleat/NIKE1.webp",images:["imgCleat/NIKE1.webp","imgCleat/NIKE1.webp","imgCleat/NIKE1.webp","imgCleat/NIKE1.webp"],desc:"ควบคุมบอลแม่นยำสำหรับพื้นหญ้าจริง FG ระดับ Elite",rating:"★★★★☆ (4.5/5)",reviews:["เบา ใส่สบายมาก","ฟิตกระชับ ดีดบอลดี"],related:[{id:"adidas1",name:"Adidas Predator Pro",price:5800,image:"imgCleat/ADD1.webp"},{id:"puma1",name:"Puma Future 8 Match",price:4200,image:"imgCleat/PUMA1.webp"}]},
+         // -nike2-
+        nike2:{brand:"Nike",code:"NMR-161E",name:"NIKE Mercurial Vapor 16 Elite AG-Pro",price:8700,oldPrice:null,surface:"AG",level:"Elite",material:"Speed Weave Upper + AG-Pro Plate",weight:"195 กรัม",image:"imgCleat/NIKE2.webp",images:["imgCleat/NIKE2.webp","imgCleat/NIKE2.webp","imgCleat/NIKE2.webp","imgCleat/NIKE2.webp"],desc:"สายสปีด เบา กระชับ เหมาะสนามหญ้าเทียม AG",rating:"★★★★★ (5.0/5)",reviews:["เร็วจริง ใส่แล้วพุ่ง","เกาะสนามดีมาก"],related:[{id:"puma2",name:"Puma Ultra 6 Match",price:3300,image:"imgCleat/PUMA2.webp"},{id:"adidas2",name:"Adidas F50 Club MG",price:2000,image:"imgCleat/ADD2.webp"}]},
+        //
+        nike3:{brand:"Nike",code:"NTL-10A",name:"NIKE Tiempo Legend 10 Academy MG",price:3200,oldPrice:null,surface:"MG",level:"Academy",material:"Synthetic Upper + MG Plate",weight:"230 กรัม",image:"imgCleat/NIKE3.webp",images:["imgCleat/NIKE3.webp","imgCleat/NIKE3.webp","imgCleat/NIKE3.webp","imgCleat/NIKE3.webp"],desc:"นุ่ม ใส่ง่าย คุ้มค่า เล่นได้ทั้งหญ้าจริง/เทียม (MG)",rating:"★★★★☆ (4.2/5)",reviews:["สัมผัสนิ่มมาก","คุ้มราคา ใส่ซ้อมทุกวัน"],related:[{id:"adidas3",name:"Adidas Copa Pure 3 Club",price:1600,image:"imgCleat/ADD3.webp"},{id:"kappa3",name:"Kappa Player Pro FG",price:2100,image:"imgCleat/KAPPA3.webp"}]},
+        //
+        adidas1:{brand:"Adidas",code:"APR-FTG",name:"ADIDAS Predator Pro Fold-Over Tongue FG",price:5800,oldPrice:null,surface:"FG",level:"Pro",material:"Synthetic Upper + FG Plate",weight:"220 กรัม",image:"imgCleat/ADD1.webp",images:["imgCleat/ADD1.webp","imgCleat/ADD1.webp","imgCleat/ADD1.webp","imgCleat/ADD1.webp"],desc:"โฟกัสการควบคุมและพลังยิง ลิ้นพับสไตล์คลาสสิก",rating:"★★★★☆ (4.3/5)",reviews:["คอนโทรลดี ยิงมั่นใจ","ฟีลลิ่งดุดัน"],related:[{id:"nike1",name:"NIKE Phantom 6 Elite",price:6990,image:"imgCleat/NIKE1.webp"},{id:"puma3",name:"Puma King Top FG/AG",price:4500,image:"imgCleat/PUMA3.webp"}]},
+        //
+        adidas2:{brand:"Adidas",code:"AF5-CLB",name:"ADIDAS F50 Club MG",price:2000,oldPrice:null,surface:"MG",level:"Club",material:"Synthetic Upper + MG Plate",weight:"235 กรัม",image:"imgCleat/ADD2.webp",images:["imgCleat/ADD2.webp","imgCleat/ADD2.webp","imgCleat/ADD2.webp","imgCleat/ADD2.webp"],desc:"รุ่นเริ่มต้นราคาคุ้ม เล่นได้หลายพื้น (MG)",rating:"★★★☆☆ (3.8/5)",reviews:["ราคาดี เหมาะเริ่มต้น","ทนพอใช้สำหรับซ้อม"],related:[{id:"nike3",name:"Tiempo Legend 10 Academy",price:3200,image:"imgCleat/NIKE3.webp"},{id:"kappa1",name:"Kappa Player Base FG",price:900,image:"imgCleat/KAPPA1.webp"}]},
+        //
+        adidas3:{brand:"Adidas",code:"ACP-3CL",name:"ADIDAS Copa Pure 3 Club MG",price:1600,oldPrice:null,surface:"MG",level:"Club",material:"Synthetic Upper + MG Plate",weight:"240 กรัม",image:"imgCleat/ADD3.webp",images:["imgCleat/ADD3.webp","imgCleat/ADD3.webp","imgCleat/ADD3.webp","imgCleat/ADD3.webp"],desc:"นิ่มสบาย ทนมือทนเท้า เหมาะซ้อมประจำ",rating:"★★★★☆ (4.0/5)",reviews:["นิ่ม ใส่ง่าย","คุ้มราคามาก"],related:[{id:"nike3",name:"Tiempo Legend 10 Academy",price:3200,image:"imgCleat/NIKE3.webp"},{id:"puma1",name:"Puma Future 8 Match",price:4200,image:"imgCleat/PUMA1.webp"}]},
+        //
+        puma1:{brand:"Puma",code:"PF8-MAT",name:"PUMA Future 8 Match FG/AG",price:4200,oldPrice:null,surface:"FG/AG",level:"Match",material:"Adaptive Upper + FG/AG Plate",weight:"205 กรัม",image:"imgCleat/PUMA1.webp",images:["imgCleat/PUMA1.webp","imgCleat/PUMA1.webp","imgCleat/PUMA1.webp","imgCleat/PUMA1.webp"],desc:"ล็อกกระชับ คล่องตัว เล่นได้ทั้ง FG และ AG",rating:"★★★★☆ (4.1/5)",reviews:["กระชับและคล่อง","คอนโทรลดี วิ่งสนุก"],related:[{id:"nike1",name:"NIKE Phantom 6 Elite",price:6990,image:"imgCleat/NIKE1.webp"},{id:"adidas3",name:"Copa Pure 3 Club",price:1600,image:"imgCleat/ADD3.webp"}]},
+        //
+        puma2:{brand:"Puma",code:"PU6-MAT",name:"PUMA Ultra 6 Match FG/AG",price:3300,oldPrice:null,surface:"FG/AG",level:"Match",material:"SpeedMesh + FG/AG Plate",weight:"200 กรัม",image:"imgCleat/PUMA2.webp",images:["imgCleat/PUMA2.webp","imgCleat/PUMA2.webp","imgCleat/PUMA2.webp","imgCleat/PUMA2.webp"],desc:"เบา เร็ว ตอบสนองไว สายบุกถูกใจ",rating:"★★★★☆ (4.0/5)",reviews:["วิ่งสบายมาก","น้ำหนักเบาโดนใจ"],related:[{id:"nike2",name:"Mercurial Vapor 16 Elite",price:8700,image:"imgCleat/NIKE2.webp"},{id:"ske3",name:"Skechers Razor 1.5 Elite",price:8100,image:"imgCleat/SKE3.webp"}]},
+        //
+        puma3:{brand:"Puma",code:"PKT-FGAG",name:"PUMA King Top FG/AG",price:4500,oldPrice:null,surface:"FG/AG",level:"Pro",material:"Leather-like Upper + FG/AG Plate",weight:"225 กรัม",image:"imgCleat/PUMA3.webp",images:["imgCleat/PUMA3.webp","imgCleat/PUMA3.webp","imgCleat/PUMA3.webp","imgCleat/PUMA3.webp"],desc:"คลาสสิก คอนโทรลนิ่ม เท้าสัมผัสดี",rating:"★★★★☆ (4.2/5)",reviews:["สัมผัสดีมาก","ดีงามสำหรับจ่ายบอล"],related:[{id:"adidas1",name:"Predator Pro FG",price:5800,image:"imgCleat/ADD1.webp"},{id:"nike3",name:"Tiempo Legend 10",price:3200,image:"imgCleat/NIKE3.webp"}]},
+        //
+        kappa1:{brand:"Kappa",code:"KPB-FG",name:"KAPPA Player Base FG",price:900,oldPrice:null,surface:"FG",level:"Base",material:"Synthetic Upper + FG Plate",weight:"245 กรัม",image:"imgCleat/KAPPA1.webp",images:["imgCleat/KAPPA1.webp","imgCleat/KAPPA1.webp","imgCleat/KAPPA1.webp.webp","imgCleat/KAPPA1.webp"],desc:"เริ่มต้นคุ้ม ราคาประหยัด เล่นสนามหญ้าจริง",rating:"★★★☆☆ (3.6/5)",reviews:["ถูกและดี","เหมาะเริ่มเล่น"],related:[{id:"adidas2",name:"F50 Club MG",price:2000,image:"imgCleat/ADD2.webp"},{id:"kappa2",name:"Helium Base FG",price:900,image:"imgCleat/KAPPA2.webp"}]},
+        //
+        kappa2:{brand:"Kappa",code:"KHB-FG",name:"KAPPA Helium Base FG",price:900,oldPrice:null,surface:"FG",level:"Base",material:"Synthetic Upper + FG Plate",weight:"245 กรัม",image:"imgCleat/KAPPA2.webp",images:["imgCleat/KAPPA2.webp","imgCleat/KAPPA2.webp","imgCleat/KAPPA2.webp","imgCleat/KAPPA2.webp"],desc:"น้ำหนักกำลังดี ใช้งานทั่วไปสบายเท้า",rating:"★★★☆☆ (3.6/5)",reviews:["ใช้ซ้อมได้โอเค","พื้นไม่ลื่น"],related:[{id:"kappa1",name:"Player Base FG",price:900,image:"imgCleat/KAPPA1.webp"},{id:"adidas3",name:"Copa Pure 3 Club",price:1600,image:"imgCleat/ADD3.webp"}]},
+        //
+        kappa3:{brand:"Kappa",code:"KPP-PRO",name:"KAPPA Player Pro FG",price:2100,oldPrice:null,surface:"FG",level:"Pro",material:"Synthetic Upper + FG Plate",weight:"235 กรัม",image:"imgCleat/KAPPA3.webp",images:["imgCleat/KAPPA3.webp","imgCleat/KAPPA3.webp","imgCleat/KAPPA3.webp","imgCleat/KAPPA3.webp"],desc:"อัปเกรดวัสดุสำหรับเกมจริงจัง ราคายังจับต้องได้",rating:"★★★☆☆ (3.9/5)",reviews:["แข็งแรง ทนดี","ฟิตเท้าดีขึ้น"],related:[{id:"nike3",name:"Tiempo Legend 10",price:3200,image:"imgCleat/NIKE3.webp"},{id:"adidas2",name:"F50 Club MG",price:2000,image:"imgCleat/ADD2.webp"}]},
+        //
+        ske1:{brand:"Skechers",code:"SSX-15E",name:"SKECHERS SKX_1.5 Elite FG",price:7900,oldPrice:null,surface:"FG",level:"Elite",material:"Engineered Upper + FG Plate",weight:"205 กรัม",image:"imgCleat/SKE1.webp",images:["imgCleat/SKE1.webp","imgCleat/SKE1.webp","imgCleat/SKE1.webp","imgCleat/SKE1.webp"],desc:"บาลานซ์ความนุ่มกับแรงดีด ทำเกมลื่นไหล",rating:"★★★★☆ (4.4/5)",reviews:["รีบาวด์ดีมาก","กระชับกำลังพอดี"],related:[{id:"ske2",name:"SKX_01 1.5 High Elite",price:8100,image:"imgCleat/SKE2.webp"},{id:"puma2",name:"Ultra 6 Match",price:3300,image:"imgCleat/PUMA2.webp"}]},
+        //
+        ske2:{brand:"Skechers",code:"SSX-01HE",name:"SKECHERS SKX_01 1.5 High Elite FG",price:8100,oldPrice:null,surface:"FG",level:"Elite",material:"Engineered Upper + FG Plate",weight:"202 กรัม",image:"imgCleat/SKE2.webp",images:["imgCleat/SKE2.webp","imgCleat/SKE2.webp","imgCleat/SKE2.webp","imgCleat/SKE2.webp"],desc:"ฟิตกระชับ ควบคุมและยิงทรงพลัง ระดับ Elite",rating:"★★★★☆ (4.5/5)",reviews:["ชูตต์ดุดัน","ใส่ติดเท้ามาก"],related:[{id:"ske1",name:"SKX_1.5 Elite FG",price:7900,image:"imgCleat/SKE1.webp"},{id:"nike2",name:"Mercurial Vapor 16",price:8700,image:"imgCleat/NIKE2.webp"}]},
+        //
+        ske3:{brand:"Skechers",code:"SRZ-15E",name:"SKECHERS Razor 1.5 Elite FG",price:8100,oldPrice:null,surface:"FG",level:"Elite",material:"Engineered Upper + FG Plate",weight:"203 กรัม",image:"imgCleat/SKE3.webp",images:["imgCleat/SKE3.webp","imgCleat/SKE3.webp","imgCleat/SKE3.webp","imgCleat/SKE3.webp"],desc:"สายสปีด ตอบสนองไว เกาะสนามดี",rating:"★★★★☆ (4.5/5)",reviews:["สปีดจัดมาก","เกาะสนามดี ไม่ลื่น"],related:[{id:"puma2",name:"Ultra 6 Match",price:3300,image:"imgCleat/PUMA2.webp"},{id:"nike2",name:"Mercurial Vapor 16",price:8700,image:"imgCleat/NIKE2.webp"}]}
+      };
+
+      // ---------- เติมข้อมูล ----------
+      const params = new URLSearchParams(window.location.search);
+      const pid = params.get("id");
+      console.log("Product ID from URL:", pid);
+
+      const mainEl = document.querySelector("main");
+      if (!mainEl) throw new Error("ไม่พบ <main> ในหน้า");
+
+      if (!pid || !products[pid]) {
+        mainEl.innerHTML = `
+          <div class="text-center py-20">
+            <h2 class="text-2xl font-bold text-red-600">❌ ไม่พบสินค้านี้</h2>
+            <a href="index.html" class="mt-4 inline-block text-green-700 underline">กลับไปหน้าร้าน</a>
+          </div>`;
+        return;
+      }
+
+      const p = products[pid];
+
+      const setText = (id, val) => { const el=$(id); if (el) el.textContent = val ?? ""; };
+      setText("breadcrumb-brand", p.brand);
+      setText("breadcrumb-name", p.name);
+      setText("product-name", p.name);
+      setText("product-code", p.code);
+      setText("product-price", "฿" + (p.price ?? 0).toLocaleString());
+      setText("product-oldprice", p.oldPrice ? "฿" + p.oldPrice.toLocaleString() : "");
+      setText("product-surface", p.surface);
+      setText("product-level", p.level);
+      setText("product-material", p.material);
+      setText("product-weight", p.weight);
+      setText("product-rating", p.rating);
+      setText("product-desc", p.desc);
+
+      const imgs = (p.images && p.images.length) ? p.images : [p.image, p.image, p.image, p.image].filter(Boolean);
+      if ($("product-img")) $("product-img").src = imgs[0] || p.image || "";
+      ["thumb1","thumb2","thumb3","thumb4"].forEach((tid,i)=>{
+        const el=$(tid); if(!el) return;
+        el.src = imgs[i] || imgs[0] || "";
+        el.alt = `${p.name} ${i+1}`;
+        el.addEventListener("click", ()=>{ $("product-img").src = el.src; });
+      });
+
+      const ul = $("product-review-list");
+      if (ul) {
+        ul.innerHTML = "";
+        (p.reviews || []).forEach(t=>{
+          const li=document.createElement("li"); li.textContent=t; ul.appendChild(li);
+        });
+      }
+
+      const rel = $("related-products");
+      if (rel) {
+        rel.innerHTML = "";
+        (p.related || []).forEach(r=>{
+          rel.insertAdjacentHTML("beforeend", `
+            <a href="product.html?id=${r.id}" class="bg-white rounded shadow hover:shadow-lg p-3">
+              <img src="${r.image}" class="w-full aspect-[4/3] object-cover rounded" alt="${r.name}">
+              <p class="mt-2 text-sm font-medium">${r.name}</p>
+              <p class="text-green-700 text-sm">฿${(r.price??0).toLocaleString()}</p>
+            </a>
+          `);
+        });
+      }
+    } catch (err) {
+      console.error(err);
+      // โชว์ error บนหน้าให้เห็นชัด
+      const overlay = document.createElement("div");
+      overlay.style.cssText = "position:fixed;inset:0;background:#1118;padding:24px;color:#fff;z-index:9999;overflow:auto";
+      overlay.innerHTML = `<pre style="white-space:pre-wrap;font-size:14px">⚠️ Script Error:\n${err.stack || err}</pre>`;
+      document.body.appendChild(overlay);
+    }
+  })();
+  </script>
+</body>
+</html>
