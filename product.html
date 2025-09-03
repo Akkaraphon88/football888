@@ -13,23 +13,44 @@
 <body class="bg-gray-50 text-gray-800">
 
   <!-- Header -->
-  <header class="bg-green-900 text-white sticky top-0 z-20 shadow">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-      
-      <!-- โลโก้ -->
-      <div class="flex items-center gap-2">
-        <img src="imgCleat/888.png" alt="Logo" class="h-10 w-auto">
-        <h1 class="font-bold text-xl">Football888</h1>
-      </div>
-
-      <!-- เมนู -->
-      <nav class="hidden md:flex gap-6">
-        <a href="index.html" class="hover:text-green-300">Home</a>
-        <a href="index.html#about" class="hover:text-green-300">About</a>
-        <a href="index.html#contact" class="hover:text-green-300">Contact</a>
-      </nav>
+<header class="bg-green-900 text-white sticky top-0 z-20 shadow">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+    
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <img src="imgCleat/888.png" alt="Logo" class="h-10 w-auto">
+      <h1 class="font-bold text-xl">Football888</h1>
     </div>
-  </header>
+
+    <!-- Menu -->
+    <nav class="hidden md:flex gap-6">
+      <a href="index.html" class="hover:text-green-300">Home</a>
+      <a href="#about" class="hover:text-green-300">About</a>
+      <a href="#contact" class="hover:text-green-300">Contact</a>
+    </nav>
+
+    <!-- Right Section -->
+    <div class="flex items-center gap-4">
+      <!-- ค้นหา -->
+      <button class="p-2 rounded-full hover:bg-green-800 transition">
+        🔍
+      </button>
+      <!-- Login -->
+      <button class="p-2 rounded-full hover:bg-green-800 transition">
+        👤
+      </button>
+      <!-- Cart -->
+      <button class="relative p-2 rounded-full hover:bg-green-800 transition">
+        🛒
+        <!-- ตัวเลขสินค้าในตะกร้า -->
+        <span class="absolute -top-1 -right-1 bg-yellow-400 text-green-900 text-xs font-bold rounded-full px-1.5">
+          2
+        </span>
+      </button>
+    </div>
+
+  </div>
+</header>
 
   <!-- Breadcrumb -->
   <div class="max-w-7xl mx-auto px-4 py-3 text-sm text-gray-600">
@@ -223,3 +244,4 @@
   </script>
 </body>
 </html>
+
