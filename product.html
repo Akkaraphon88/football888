@@ -1,69 +1,81 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+  <!-- บอกเบราว์เซอร์ว่าเป็นเอกสาร HTML5 กับภาษาไทย -->
   <meta charset="UTF-8">
+
+  <!-- ให้เว็บยืดหดตามจอมือถือ ไม่งั้นจะเละ -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Football888 – Product Detail</title>
 
-  <!-- โลโก้ร้านในแท็บ -->
+  <!-- ใส่ไอคอนร้านบนแท็บเบราว์เซอร์ แบบบ้านๆคือโลโก้เราแหละ -->
   <link rel="icon" type="image/png" href="imgCleat/888.png">
 
+  <!-- ใช้ Tailwind แบบ CDN: ไม่ต้องเขียน CSS เองเยอะ คลาสสำเร็จรูปเพียบ -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- Header -->
-<header class="bg-green-900 text-white sticky top-0 z-20 shadow">
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-    
-    <!-- Logo -->
-    <div class="flex items-center gap-2">
-      <img src="imgCleat/888.png" alt="Logo" class="h-10 w-auto">
-      <h1 class="font-bold text-xl">Football888</h1>
+  <!-- =================== Header =================== -->
+  <!-- หัวเว็บให้ติดบนสุดตลอดเวลา (sticky) + z-20 กันโดนอย่างอื่นทับ -->
+  <header class="bg-green-900 text-white sticky top-0 z-20 shadow">
+    <!-- กล่องกลางความกว้างคงที่ max-w-7xl จัดวาง 3 ฝั่ง: โลโก้ / เมนู / ปุ่มขวา -->
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      
+      <!-- ฝั่งซ้าย: โลโก้ + ชื่อร้าน -->
+      <div class="flex items-center gap-2">
+        <img src="imgCleat/888.png" alt="Logo" class="h-10 w-auto">
+        <h1 class="font-bold text-xl">Football888</h1>
+      </div>
+
+      <!-- เมนูกลาง: โชว์เฉพาะจอ md ขึ้นไป (มือถือขอซ่อนให้โล่งๆ) -->
+      <nav class="hidden md:flex gap-6" aria-label="เมนูหลัก">
+        <a href="index.html" class="hover:text-green-300">Home</a>
+        <a href="#about" class="hover:text-green-300">About</a>
+        <a href="#contact" class="hover:text-green-300">Contact</a>
+      </nav>
+
+      <!-- ฝั่งขวา: ปุ่มไอคอน 3 ตัว (ค้นหา/ล็อกอิน/ตะกร้า) -->
+      <div class="flex items-center gap-4">
+        <!-- ปุ่มค้นหา: ทำโค้งๆหน่อย พอโฮเวอร์ก็เข้มขึ้น -->
+        <button type="button" title="ค้นหา" class="p-2 rounded-full hover:bg-green-800 transition">
+          🔍
+        </button>
+        <!-- ปุ่มล็อกอิน: เผื่อค่อยไปผูก modal/login ทีหลัง -->
+        <button type="button" title="เข้าสู่ระบบ" class="p-2 rounded-full hover:bg-green-800 transition">
+          👤
+        </button>
+        <!-- ปุ่มตะกร้า: มี badge ตัวเลขมุมบนขวา บอกว่ามีกี่ชิ้น -->
+        <button type="button" title="ตะกร้าสินค้า" class="relative p-2 rounded-full hover:bg-green-800 transition">
+          🛒
+          <span class="absolute -top-1 -right-1 bg-yellow-400 text-green-900 text-xs font-bold rounded-full px-1.5">
+            2
+          </span>
+        </button>
+      </div>
+
     </div>
+  </header>
 
-    <!-- Menu -->
-    <nav class="hidden md:flex gap-6">
-      <a href="index.html" class="hover:text-green-300">Home</a>
-      <a href="#about" class="hover:text-green-300">About</a>
-      <a href="#contact" class="hover:text-green-300">Contact</a>
-    </nav>
-
-    <!-- Right Section -->
-    <div class="flex items-center gap-4">
-      <!-- ค้นหา -->
-      <button class="p-2 rounded-full hover:bg-green-800 transition">
-        🔍
-      </button>
-      <!-- Login -->
-      <button class="p-2 rounded-full hover:bg-green-800 transition">
-        👤
-      </button>
-      <!-- Cart -->
-      <button class="relative p-2 rounded-full hover:bg-green-800 transition">
-        🛒
-        <!-- ตัวเลขสินค้าในตะกร้า -->
-        <span class="absolute -top-1 -right-1 bg-yellow-400 text-green-900 text-xs font-bold rounded-full px-1.5">
-          2
-        </span>
-      </button>
-    </div>
-
-  </div>
-</header>
-
-  <!-- Breadcrumb -->
+  <!-- =================== Breadcrumb =================== -->
+  <!-- ไว้บอกทางว่าตอนนี้เราเปิดสินค้าจากแบรนด์อะไร รุ่นอะไร คลิกกลับได้ -->
   <div class="max-w-7xl mx-auto px-4 py-3 text-sm text-gray-600">
     <a href="index.html" class="hover:underline">Home</a> / 
     <span id="breadcrumb-brand"></span> / 
     <span id="breadcrumb-name"></span>
   </div>
 
-  <!-- Main Product -->
+  <!-- =================== Main Product =================== -->
+  <!-- layout 2 คอลัมน์ตอนจอ md ขึ้นไป: ซ้ายรูป/ขวาข้อมูล (มือถือเรียงลง) -->
   <main class="max-w-7xl mx-auto px-4 py-6 grid md:grid-cols-2 gap-6">
-    <!-- Gallery -->
+    
+    <!-- กล่องรูปสินค้า -->
     <div>
+      <!-- รูปหลัก: ล็อกสัดส่วน 4:3 ให้ดูไม่บี้ + ใส่เงานิดๆ -->
       <img id="product-img" class="w-full rounded-lg shadow aspect-[4/3] object-cover" alt="">
+      
+      <!-- รูปเล็ก 4 ช่อง: กดสลับรูปหลักได้ (เดี๋ยวให้ JS ใส่ src ให้) -->
       <div class="grid grid-cols-4 gap-2 mt-3">
         <img id="thumb1" class="rounded border cursor-pointer" alt="">
         <img id="thumb2" class="rounded border cursor-pointer" alt="">
@@ -72,41 +84,50 @@
       </div>
     </div>
 
-    <!-- Info -->
+    <!-- กล่องข้อมูลสินค้า -->
     <div class="bg-white rounded-lg shadow p-6">
+      <!-- ชื่อรุ่น -->
       <h1 id="product-name" class="text-2xl font-bold"></h1>
+
+      <!-- โชว์รหัสสินค้า เผื่อเวลาลูกค้าทักแชท -->
       <p class="text-gray-500 text-sm mt-1">รหัสสินค้า: <span id="product-code"></span></p>
+
+      <!-- ราคา/ราคาเก่า: ใส่สีเขียวให้ดูเป็นมิตรตังค์ในกระเป๋า -->
       <div class="flex items-baseline gap-2 mt-2">
         <span id="product-price" class="text-green-700 font-bold text-2xl"></span>
         <span id="product-oldprice" class="text-gray-400 line-through"></span>
       </div>
+
+      <!-- เรตติ้งแบบสั้นๆ -->
       <p id="product-rating" class="text-yellow-500 text-sm mt-1"></p>
 
-      <div class="mt-4">
+      <!-- รายละเอียดเชิงเทคนิค: พื้นสนาม/ระดับ/วัสดุ/น้ำหนัก -->
+      <div class="mt-4 space-y-1">
         <p><b>พื้นสนาม:</b> <span id="product-surface"></span></p>
         <p><b>ระดับ:</b> <span id="product-level"></span></p>
         <p><b>วัสดุ:</b> <span id="product-material"></span></p>
         <p><b>น้ำหนัก:</b> <span id="product-weight"></span></p>
       </div>
 
-      <!-- Size -->
+      <!-- ปุ่มไซส์: ของจริงค่อยใส่สถานะ active/disable ด้วย JS -->
       <div class="mt-4">
         <label class="block font-medium mb-1">เลือก Size</label>
         <div class="flex flex-wrap gap-2">
-          <button class="px-3 py-1 border rounded hover:bg-green-100">40</button>
-          <button class="px-3 py-1 border rounded hover:bg-green-100">41</button>
-          <button class="px-3 py-1 border rounded hover:bg-green-100">42</button>
+          <button type="button" class="px-3 py-1 border rounded hover:bg-green-100">40</button>
+          <button type="button" class="px-3 py-1 border rounded hover:bg-green-100">41</button>
+          <button type="button" class="px-3 py-1 border rounded hover:bg-green-100">42</button>
         </div>
       </div>
 
-      <!-- CTA -->
-      <button class="mt-6 w-full bg-green-700 text-white py-3 rounded-lg hover:bg-green-800">
+      <!-- ปุ่มหยิบลงตะกร้า: กดแล้วเดี๋ยว JS ค่อยทำงานต่อ -->
+      <button type="button" class="mt-6 w-full bg-green-700 text-white py-3 rounded-lg hover:bg-green-800">
         🛒 หยิบใส่ตะกร้า
       </button>
     </div>
   </main>
 
-  <!-- Tabs -->
+  <!-- =================== Tabs/รายละเอียด/รีวิว =================== -->
+  <!-- บล็อกรวมคำอธิบาย + รีวิวลูกค้า (เดี๋ยว JS เอาข้อความมาใส่) -->
   <section class="max-w-7xl mx-auto px-4 mt-10">
     <div class="bg-white rounded-lg shadow p-6">
       <h2 class="font-bold text-lg mb-3">รายละเอียดสินค้า</h2>
@@ -118,16 +139,19 @@
     </div>
   </section>
 
-  <!-- Related Products -->
+  <!-- =================== Related Products =================== -->
+  <!-- สินค้าที่เกี่ยวข้อง: ยิงลิงก์ไปหน้าสินค้าชิ้นอื่นๆ -->
   <section class="max-w-7xl mx-auto px-4 mt-10">
     <h2 class="font-bold text-lg mb-4">สินค้าที่เกี่ยวข้อง</h2>
     <div id="related-products" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
   </section>
 
-  <!-- Footer -->
+  <!-- =================== Footer =================== -->
+  <!-- ท้ายเว็บ ใส่เครดิตปี กับชื่อร้านพอให้ดูเต็มๆ -->
   <footer class="bg-green-900 text-white text-center py-6 mt-10">
     <p>© 2025 FootballShop</p>
   </footer>
+
 
   <!-- JavaScript -->
   <script>
@@ -244,4 +268,3 @@
   </script>
 </body>
 </html>
-
